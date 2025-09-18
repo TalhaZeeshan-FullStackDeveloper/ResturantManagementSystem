@@ -219,5 +219,38 @@ links.forEach((link, i) => setTimeout(() => link.classList.add('show'), 200 + i 
   </div>
 </div>
 
+
+<script>
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  var name = document.getElementById("name").value.trim();
+  var city = document.getElementById("city").value.trim();
+  var phone = document.getElementById("phone").value.trim();
+  var email = document.getElementById("email").value.trim();
+  var message = document.getElementById("message").value.trim();
+
+  if (!name || !city || !phone || !email || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  var whatsappNumber = "923260971621";
+  var whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" +
+    encodeURIComponent(
+      "📩 Contact Request\n\n" +
+      "👤 Name: " + name + "\n" +
+      "🏙 City: " + city + "\n" +
+      "📞 Phone: " + phone + "\n" +
+      "📧 Email: " + email + "\n" +
+      "📝 Message:\n" + message
+    );
+
+  window.open(whatsappUrl, "_blank");
+});
+</script>
+
+
+
 </body>
 </html>

@@ -86,7 +86,18 @@ links.forEach((link, i) => setTimeout(() => link.classList.add('show'), 200 + i 
 
 
 <div class="container mt-4">
-<h2 class="mb-4 stylish-heading">All Orders</h2>
+    <h2 class="mb-4 stylish-heading">All Orders</h2>
+
+   <!-- 🔎 Live Search Input -->
+<div class="mb-5">
+    <input type="text" id="search" class="form-control" style="border: 10px solid red;" placeholder="Search by name, email or status...">
+</div>
+
+
+   
+
+
+
 
     @if($orders->isEmpty())
         <div class="alert alert-warning text-center">No orders found.</div>
@@ -104,7 +115,8 @@ links.forEach((link, i) => setTimeout(() => link.classList.add('show'), 200 + i 
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="orderTableBody">
+            @include('orders.partials.order_rows')
                 @foreach($orders as $order)
                 <tr>
                     <td>{{ $order->id }}</td>
@@ -143,4 +155,24 @@ links.forEach((link, i) => setTimeout(() => link.classList.add('show'), 200 + i 
     @endif
 </div>
 @endsection
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#search').on('keyup', function(){
+        let query = $(this).val();
+        $.ajax({
+            url: "{{ route('orders.index') }}",
+            type: "GET",
+            data: { search: query },
+            success: function(data){
+                $('#orderTableBody').html(data);
+            }
+        });
+    });
+});
+</script>
+
+
+
 </body>

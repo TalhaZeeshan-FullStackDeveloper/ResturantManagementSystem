@@ -12,11 +12,32 @@ class OrderController extends Controller
 {
 
     // Show all orders
-public function index()
-{
-    $orders = Order::latest()->get();
-    return view('orders.index', compact('orders'));
-}
+    public function index(Request $request)
+    {
+        $query = Order::query();
+    
+        if ($request->has('search') && !empty($request->search)) {
+            $search = $request->search;
+            $query->where(function($q) use ($search) {
+                $q->where('customer_name', 'like', "%{$search}%")
+                  ->orWhere('customer_email', 'like', "%{$search}%")
+                  ->orWhere('status', 'like', "%{$search}%");
+            });
+        }
+    
+        $orders = $query->latest()->get();
+    
+        // If AJAX request, return only the table body
+        if ($request->ajax()) {
+            return view('orders.partials.order_rows', compact('orders'))->render();
+        }
+    
+        return view('orders.index', compact('orders'));
+    }
+    
+    
+
+
 
     // Show the order form
     public function create()

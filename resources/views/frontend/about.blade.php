@@ -42,7 +42,7 @@
 
     .parallax-1 { background-image:url('{{ asset("") }}'); }
     .parallax-2 { background-image:url('{{ asset("img/keyboard-5017973_1920.jpg") }}'); }
-    .parallax-3 { background-image:url('{{ asset("img/software-developer-6521720_1920.jpg") }}'); }
+    .parallax-3 { background-image:url('{{ asset("img/code-4333398_1920.jpg") }}'); }
 
     .content {
       padding: 60px 20px;
@@ -200,7 +200,7 @@
   <!-- ✅ PARALLAX SECTION 1 -->
   <section class="parallax parallax-1" id="home">
     <video autoplay muted loop playsinline class="position-absolute top-50 start-50 translate-middle w-100 h-100" style="object-fit:cover; z-index:-1;">
-      <source src="{{ asset('img/WhatsApp Video 2025-08-02 at 11.55.51_0af8d869.mp4') }}" type="video/mp4">
+      <source src="{{ asset("img/videoplayback1.mp4") }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background:rgba(0,0,0,0.4); z-index:0;"></div>
@@ -224,7 +224,7 @@
       <div class="row g-4 text-center">
         <div class="col-sm-6 col-md-4">
           <div class="developer-card">
-            <img src="{{ asset('img/feet-1840619_1920.jpg') }}" class="shoe-img" alt="Talha Zeeshan">
+            <img src="{{ asset("img/man-9802795_1920.png") }}" class="shoe-img" alt="Talha Zeeshan">
             <div class="developer-info">
               <h3><span style="color:red;">T</span>alha <span style="color:red;">Z</span>eeshan</h3>
               <p>FULL STACK WEBSITE DEVELOPER<br>HTML, CSS, BOOTSTRAP, JavaScript, Laravel & PHP</p>
@@ -233,7 +233,7 @@
         </div>
         <div class="col-sm-6 col-md-4">
           <div class="developer-card">
-            <img src="{{ asset('img/feet-1840619_1920.jpg') }}" class="shoe-img" alt="Amanullah">
+            <img src="{{ asset("img/man-1459246_1920.png") }}" class="shoe-img" alt="Amanullah">
             <div class="developer-info">
               <h3><span style="color:red;">A</span>manullah</h3>
               <p>FULL STACK WEBSITE DEVELOPER<br>HTML, CSS, BOOTSTRAP, JavaScript, Laravel & PHP</p>
@@ -242,7 +242,7 @@
         </div>
         <div class="col-sm-6 col-md-4 mx-auto">
           <div class="developer-card">
-            <img src="{{ asset('img/feet-1840619_1920.jpg') }}" class="shoe-img" alt="Mateen Ahmad">
+            <img src="{{ asset("img/man-1351317_1920.png") }}" class="shoe-img" alt="Mateen Ahmad">
             <div class="developer-info">
               <h3><span style="color:red;">M</span>ateen <span style="color:red;">A</span>hmad</h3>
               <p>FULL STACK APP DEVELOPER<br>HTML, CSS, JavaScript & Related Frameworks</p>
@@ -254,8 +254,10 @@
   </section>
 
   <!-- ✅ ANOTHER CONTENT BLOCK -->
-  <section class="content">
-    <p>Another content block to showcase the parallax transition.</p>
+  <section class="content bg-black" id="about-us">
+    <h2 style="text-align: center; font-family: 'Pacifico', cursive; font-size: 5rem; color: #fff; margin: 0;">
+      <span style="color:red;">O</span>ur <span style="color:red;">S</span>urvices
+    </h2>
   </section>
 
   <!-- ✅ THANK YOU SECTION -->
