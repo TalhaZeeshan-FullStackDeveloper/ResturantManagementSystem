@@ -144,7 +144,7 @@
 
             <div class="d-grid gap-2">
                 <button style=" background: #ff0000" class="btn btn-danger">Login</button>
-                <a href="/register" class="btn btn-dark">Register</a>
+                <a href="/register" class="btn btn-danger">Register</a>
             </div>
         </form>
     </div>

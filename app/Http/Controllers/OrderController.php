@@ -134,9 +134,8 @@ public function updateStatus(Request $request, $id)
 // Show tracking form
 public function track()
     {
-        return view('orders.track');
+        return view('orders.track'); 
     }
-
     public function trackResult(Request $request)
 {
     $request->validate([

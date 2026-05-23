@@ -135,12 +135,7 @@ to { opacity: 1; transform: translateY(0); }
 </a>
 </li>
 
-<li class="nav-item">
-<a class="nav-link" href="/register1"> {{-- use your actual cart route name here --}}
-<i class="fas fa-user-plus" style="font-size: 1.5rem; color: red;"></i>
-<span>Register</span>
-</a>
-</li>
+
 <li>
 <form action="/logout1" method="POST" class="ms-3">
   @csrf

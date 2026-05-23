@@ -373,9 +373,9 @@ body {
     </a>
 </li>
 <li class="nav-item">
-    <a class="nav-link"a href="{{ url('/orders/track') }}" >
+<a class="nav-link" href="{{ route('orders.track') }}">
     <i class="fas fa-truck" style="font-size: 1.5rem; color: red;"></i> Track Order
-    </a>
+</a>
 </li>
 <li>
 <form action="/logout" method="POST" class="ms-3">
@@ -396,10 +396,10 @@ body {
 
 
 <div class="d-flex justify-content-center py-3">
-        <a href='/login1'  class="glow-btn">
-            Admin Panel
-        </a>
-    </div>
+    <a href="{{ route('nike.adminpannel') }}" class="glow-btn">
+        Admin Panel
+    </a>
+</div>
 
 
 

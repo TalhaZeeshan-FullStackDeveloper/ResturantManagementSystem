@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Register;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth; // Added this
 use Illuminate\Support\Facades\Session;
-use App\Models\Product; // or whatever your model is
 
 class RegisterController extends Controller
 {
@@ -23,7 +23,7 @@ class RegisterController extends Controller
             'password'=>'required|min:6'
         ]);
 
-        Register::create([
+        $user = Register::create([
             'name'=>$request->name,
             'email'=>$request->email,
             'password'=>Hash::make($request->password)
@@ -44,11 +44,10 @@ class RegisterController extends Controller
             'password'=>'required'
         ]);
 
-        $user = Register::where('email', $request->email)->first();
-
-        if ($user && Hash::check($request->password, $user->password)) {
-            session(['user' => $user]);
-            return redirect('/nike/front');
+        // Attempt to log the user in using Laravel's Auth system
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            $request->session()->regenerate();
+            return redirect()->intended('/nike/front'); 
         }
 
         return back()->with('error', 'Invalid credentials');
@@ -56,15 +55,15 @@ class RegisterController extends Controller
 
     public function logout()
     {
-        Session::flush();
+        Auth::logout(); // Use Auth logout
+        Session::invalidate();
+        Session::regenerateToken();
         return redirect('/login');
     }
 
     public function front()
     {
-        if (!session()->has('user')) {
-            return redirect('/login');
-        }
-        return view('/nike.front');
+        // The middleware handles this now, but keeping the function as requested
+        return view('nike.front'); 
     }
 }
