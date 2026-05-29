@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 // 2. Change 'extends Model' to 'extends Authenticatable'
-class register extends Authenticatable 
+class Register extends Authenticatable 
 {
     use HasFactory, Notifiable;
 
