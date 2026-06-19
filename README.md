@@ -4,160 +4,134 @@ A modern **Full Stack Restaurant Management System** developed using **Laravel, 
 
 ---
 
-# 🚀 Project Overview
+## 🚀 Project Overview
 
-This project was designed to streamline restaurant operations through a clean and scalable full-stack architecture.
+This project was developed to simplify restaurant operations through a scalable full-stack architecture and responsive user experience.
 
-The system enables efficient handling of menus, products, orders, customer workflows, checkout processing, and administrative management.
-
----
-
-# 🛠️ Tech Stack
-
-## Backend
-
-* Laravel Framework
-* PHP 8.x
-* MVC Architecture
-
-## Database
-
-* MySQL
-* Relational Database Design
-
-## Frontend
-
-* Bootstrap 5
-* Blade Template Engine
-* JavaScript
-* Responsive UI
-
-## Development Tools
-
-* Git
-* GitHub
-* Postman
-* XAMPP
+The system manages menus, products, customer interaction, orders, checkout processing, and administrative workflows.
 
 ---
 
-# ✨ Core Features
+## 🛠️ Tech Stack
 
-## Authentication
+### Backend
+- Laravel Framework
+- PHP 8.x
+- MVC Architecture
 
-✔ User Registration
-✔ Secure Login System
-✔ Session Management
+### Database
+- MySQL
+- Relational Database Design
 
----
+### Frontend
+- Bootstrap 5
+- Blade Template Engine
+- JavaScript
+- Responsive UI
 
-## Restaurant Operations
-
-✔ Dynamic Menu Management
-✔ Product Management
-✔ Responsive Customer Interface
-
----
-
-## Order Workflow
-
-✔ Add to Cart
-✔ Checkout System
-✔ Order Placement
-✔ Order Tracking
+### Development Tools
+- Git
+- GitHub
+- Postman
+- XAMPP
 
 ---
 
-## Admin Controls
+## ✨ Core Features
 
-✔ Dashboard Analytics
-✔ Order Management
-✔ System Monitoring
+### Authentication
+- User Registration
+- Secure Login System
+- Session Management
 
----
+### Restaurant Operations
+- Dynamic Menu Management
+- Product Management
+- Responsive Customer Interface
 
-## User Experience
+### Order Workflow
+- Add to Cart
+- Checkout System
+- Order Placement
+- Order Tracking
 
-✔ Responsive Layout
-✔ Interactive JavaScript Animations
-✔ Modern UI Design
-✔ Smooth Navigation
+### Admin Controls
+- Dashboard Analytics
+- Order Management
+- System Monitoring
+
+### User Experience
+- Responsive Layout
+- Interactive JavaScript Animations
+- Modern UI Design
+- Smooth Navigation
 
 ---
 
 # 📷 Application Screenshots
 
 ## 🏠 Home Page
-
-![Home](screenshots/home.png.png)
+![Home](home.png.png)
 
 ---
 
 ## 📝 Registration Page
-
-![Register](screenshots/register.png.png)
+![Register](register.png.png)
 
 ---
 
 ## 🍽️ Menu Interface
-
-![Menu](screenshots/menu.png.png)
+![Menu](menu.png.png)
 
 ---
 
 ## 📦 Products Page
-
-![Products](screenshots/products.png.png)
+![Products](products.png.png)
 
 ---
 
 ## 🛒 Cart System
-
-![Cart](screenshots/cart.png.png)
+![Cart](cart.png.png)
 
 ---
 
 ## 💳 Checkout Page
-
-![Checkout](screenshots/checkout.png.png)
+![Checkout](checkout.png.png)
 
 ---
 
 ## 📍 Order Tracking
-
-![Track](screenshots/track.png.png)
+![Track](track.png.png)
 
 ---
 
 ## 📋 Orders Management
-
-![Orders](screenshots/order.png.png)
+![Orders](order.png.png)
 
 ---
 
 ## 📊 Dashboard
-
-![Dashboard](screenshots/dashboard.png.png)
-
----
-
-# 📂 Project Highlights
-
-* Full Stack Architecture
-* Responsive Web Design
-* Interactive UI Animations
-* Scalable Database Structure
-* Dynamic Restaurant Workflow
-* Clean User Experience
+![Dashboard](dashboard.png.png)
 
 ---
 
-# 👨‍💻 Developer
+## 📂 Project Highlights
 
-**Talha Zeeshan**
-Full Stack Web Developer
+- Full Stack Architecture  
+- Responsive Web Design  
+- Interactive JavaScript Animations  
+- Scalable Database Structure  
+- Dynamic Restaurant Workflow  
+- Clean User Experience  
 
-GitHub:
+---
+
+## 👨‍💻 Developer
+
+**Talha Zeeshan**  
+Full Stack Web Developer  
+
+GitHub:  
 https://github.com/TalhaZeeshan-FullStackDeveloper
 
 ---
